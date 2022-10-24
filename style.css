@@ -1,0 +1,129 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+body {
+	background: #272727;
+}
+
+.name {
+	color: #FFF;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: bolder;
+}
+
+#me {
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	margin: 40px 0;
+}
+
+.main-item {
+	color: #FFF;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: bold;
+	margin: 20px 20px 50px 20px;
+}
+
+.work-container{
+	display: flex;
+	flex-direction: column;
+	background-color: #FFC700;
+	margin: 0 15px;
+	padding: 15px;
+}
+
+.work-item{
+	text-decoration: none;
+	color: #000;
+}
+
+.contact-container {
+	display: flex;
+	flex-direction: column;
+	background-color: #272727;
+	border: solid 2px #FFF;
+	margin: 0 15px;
+	padding: 15px;
+}
+
+.contact-item {
+	text-decoration: none;
+	color: #FFF;
+}
+
+.contact-logos {
+	margin: 10px;
+}
+
+.logos {
+	margin: 0 10px;
+	width: 40px;
+	height: 40px;
+}
+
+/* Animations */
+
+.work-container:hover {
+	opacity: .8;
+	margin: 0 -15px;
+	transition: 1s;
+}
+
+.contact-container:hover {
+	margin: 0 -15px;
+	transition: 1s;
+}
+
+.logos:hover {
+	opacity: .8;
+}
+
+/* Dark/Light Mode Switch */
+
+#container {
+	display: flex;
+	flex-direction: row;
+	background-color: #272727;
+	width: 50px;
+	height: 21px;
+
+	margin: -30px 0 0 10px;
+	border: solid 2px #FFC700;
+	border-radius: 12px;
+	cursor: pointer;
+}
+
+.toggle {
+	background-color: #FFC700;
+	margin: 1px 0 10px 1px;
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+}
+
+/* Switch Animation */
+
+#container.active .toggle {
+	transform: translateX(30px);
+	background-color: #D5E6FF;
+	
+}
+
+.toggle.active {
+	border-color: #D5E6FF;
+}
+
+body.active {
+	background-color: #FFF;
+}
+
+h1.active {
+	color: #000;
+} 
+
+
