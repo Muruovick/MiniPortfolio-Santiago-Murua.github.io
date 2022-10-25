@@ -13,6 +13,13 @@ body {
 	color: #FFF;
 	font-family: 'Roboto Mono', monospace;
 	font-weight: bolder;
+	margin: 20px 0 0 0;
+
+	animation-name: title;
+	animation-duration: 1s;
+	animation-delay: .5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
 }
 
 #me {
@@ -20,6 +27,12 @@ body {
 	height: 150px;
 	border-radius: 100%;
 	margin: 40px 0;
+
+	animation-name: personal-img;
+	animation-duration: 1s;
+	animation-delay: .5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
 }
 
 .main-item {
@@ -27,6 +40,12 @@ body {
 	font-family: 'Roboto Mono', monospace;
 	font-weight: bold;
 	margin: 20px 20px 50px 20px;
+
+	animation-name: text-content;
+	animation-duration: 1s;
+	animation-delay: .5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
 }
 
 .work-container{
@@ -35,6 +54,12 @@ body {
 	background-color: #FFC700;
 	margin: 0 15px;
 	padding: 15px;
+
+	animation-name: work-container;
+	animation-duration: 1s;
+	animation-delay: .5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
 }
 
 .work-item{
@@ -49,6 +74,12 @@ body {
 	border: solid 2px #FFF;
 	margin: 0 15px;
 	padding: 15px;
+
+	animation-name: contact-container;
+	animation-duration: 1s;
+	animation-delay: .5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
 }
 
 .contact-item {
@@ -64,6 +95,12 @@ body {
 	margin: 0 10px;
 	width: 40px;
 	height: 40px;
+
+	animation-name: logos;
+	animation-duration: 1s;
+	animation-delay: 1.5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
 }
 
 /* Animations */
@@ -85,20 +122,25 @@ body {
 
 /* Dark/Light Mode Switch */
 
-#container {
+.container-switch {
 	display: flex;
 	flex-direction: row;
 	background-color: #272727;
 	width: 50px;
 	height: 21px;
-
 	margin: -30px 0 0 10px;
 	border: solid 2px #FFC700;
 	border-radius: 12px;
 	cursor: pointer;
+
+	animation-name: switch-container;
+	animation-duration: 1s;
+	animation-delay: 1.5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
 }
 
-.toggle {
+#switch {
 	background-color: #FFC700;
 	margin: 1px 0 10px 1px;
 	width: 15px;
@@ -106,24 +148,119 @@ body {
 	border-radius: 100%;
 }
 
-/* Switch Animation */
+/* Switch Functions */
 
-#container.active .toggle {
-	transform: translateX(30px);
-	background-color: #D5E6FF;
-	
+
+
+
+/* Startup Animations */
+
+@keyframes title {
+	0% {
+		transform: translateY(-100px);
+
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 
-.toggle.active {
-	border-color: #D5E6FF;
+@keyframes text-content {
+	0% {
+		opacity: .1;
+	}
+
+	20% {
+		opacity: .2;
+	}
+
+	40% {
+		opacity: .4;
+	}
+
+	60% {
+		opacity: .6;
+	}
+
+	80% {
+		opacity: .8;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
-body.active {
-	background-color: #FFF;
+@keyframes work-container {
+	0% {
+		transform: translateY(500px);
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 
-h1.active {
-	color: #000;
-} 
+@keyframes contact-container {
+	0% {
+		transform: translateY(500px);
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes logos {
+	0% {
+		transform: translateY(500px);
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes personal-img {
+	0% {
+		opacity: .1;
+	}
+
+	20% {
+		opacity: .2;
+	}
+
+	40% {
+		opacity: .4;
+	}
+
+	60% {
+		opacity: .6;
+	}
+
+	80% {
+		opacity: .8;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes switch-container {
+	0% {
+		transform: translateX(-200px);
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
 
 
